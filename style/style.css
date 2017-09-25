@@ -1,0 +1,13 @@
+.Wrapper {
+  position: relative;
+}
+
+.fingerBoard {
+  z-index: -1;
+}
+
+.fingerBoard,
+.fingerPosition {
+  position: absolute;
+  top: 0;
+}

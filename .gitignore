@@ -1,0 +1,12 @@
+/node_modules
+bundle.js
+npm-debug.log
+.DS_Store
+/src/actions
+/src/containers
+/src/reducers
+/test
+
+# IntelliJ
+*.iml
+/.idea
