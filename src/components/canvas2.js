@@ -30,7 +30,7 @@ export default class Canvas2 extends Component {
   }
 
   render() {
-    return <canvas ref="canvas" width='1024px' height='256px'></canvas>
+    return <canvas className="fingerPosition" ref="canvas" width='1024px' height='256px'></canvas>
   }
 }
 

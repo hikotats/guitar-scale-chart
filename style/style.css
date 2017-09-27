@@ -1,5 +1,6 @@
-.Wrapper {
+.wrapper {
   position: relative;
+  top: 50px;
 }
 
 .fingerBoard {
@@ -10,4 +11,5 @@
 .fingerPosition {
   position: absolute;
   top: 0;
+  left: 0;
 }

@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import reducers from './reducers'
-import App from './components/app'
+import ScaleChart from './components/scale-chart'
 
 let store = createStore(
   reducers,
@@ -12,7 +12,7 @@ let store = createStore(
 
 render(
   <Provider store={store}>
-    <App />
+    <ScaleChart />
   </Provider>
   , document.getElementById('root')
 )
