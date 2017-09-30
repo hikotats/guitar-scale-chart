@@ -3,29 +3,28 @@ import { Const } from '../..'
 
 const { Mode, Key, Size, Style } = Const
 
-export default class Canvas2 extends Component {
+export default class CanvasFront extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      key: 'C',
-      mode: 'IONIAN'
-    }
   }
 
   componentDidMount() {
-    this.ctx = this.refs.canvas.getContext('2d')
-    const { key, mode } = this.state
+    const { width, height } = this.refs.canvas
+    const { tonality, mode } = this.props
     const scale = Mode[mode]
+    this.ctx = this.refs.canvas.getContext('2d')
+    this.ctx.clearRect(0, 0, width, height)
 
-    drawPosition(this.ctx, scale, mode, key);
+    drawPosition(this.ctx, scale, mode, tonality);
     drawPosName(this.ctx, scale);
   }
 
   componentDidUpdate() {
-    const { key, mode } = this.state
+    const { width, height } = this.refs.canvas
+    const { tonality, mode } = this.props
     const scale = Mode[mode]
-    this.ctx.clearRect(0, 0, this.props.width, this.props.height)
-    drawPosition(this.ctx, scale, mode, key);
+    this.ctx.clearRect(0, 0, width, height)
+    drawPosition(this.ctx, scale, mode, tonality);
     drawPosName(this.ctx, scale);
   }
 

@@ -3,22 +3,18 @@ import { Const } from '../..'
 
 const { Mode, Key, Size, Style } = Const
 
-export default class Canvas1 extends Component {
-  constructor () {
-    super()
-    this.state = {
-      key: 'C',
-      mode: 'IONIAN'
-    }
+export default class CanvasBack extends Component {
+  constructor (props) {
+    super(props)
   }
 
   componentDidMount() {
     this.ctx = this.refs.canvas.getContext('2d')
-    const { key, mode } = this.state
+    const { tonality, mode } = this.props
     const scale = Mode[mode]
     drawStrings(this.ctx);
     drawFlet(this.ctx, scale);
-    drawChordName(this.ctx, key);
+    // drawChordName(this.ctx, tonality)
   }
 
   render() {
@@ -87,14 +83,14 @@ function  getFirstFlet(scale) {
   return ret ;
 }
 
-function drawChordName(ctx, scale) {
-  ctx.fillStyle = Style.FILL.STYLE;
-  ctx.font = Style.FILL.FONT;
-  ctx.textAlign = "center";
-  ctx.textBaseline = "baseline";
-  ctx.fillText(scale, 10, 10, 128);
-  ctx.fillStyle = "black";
-}
+// function drawChordName(ctx, scale) {
+//   ctx.fillStyle = Style.FILL.STYLE;
+//   ctx.font = Style.FILL.FONT;
+//   ctx.textAlign = "center";
+//   ctx.textBaseline = "baseline";
+//   ctx.fillText(scale, 10, 10, 128);
+//   ctx.fillStyle = "black";
+// }
 
 function drawStrings (ctx) {
   let startX = Size.RIGHT_OFFSET;

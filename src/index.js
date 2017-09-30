@@ -2,17 +2,14 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import reducers from './reducers'
-import ScaleChart from './components/scale-chart'
+import selecter from './modules/selecter'
+import App from './components/index'
 
-let store = createStore(
-  reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+let store = createStore(selecter)
 
 render(
   <Provider store={store}>
-    <ScaleChart />
+    <App />
   </Provider>
-  , document.getElementById('root')
+  , document.getElementById('scale-chart')
 )
