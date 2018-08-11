@@ -22119,6 +22119,7 @@
 	});
 	exports.default = {
 	  Major: 'R||9||M3|11||P5||13||M7',
+	  Minor: 'R||9|m3||11||P5|b13||m7|',
 	  'Harmonic Minor': 'R||9|m3||11||P5|b13|||M7',
 	  'Melodic Minor (Ascending)': 'R||9|m3||11||P5||13||M7',
 	  'Melodic Minor (Descending)': 'R||9|m3||11||P5|b13||m7|',
@@ -22145,17 +22146,17 @@
 	});
 	var KEYS = {
 	  'C': 0,
-	  'C#/Db': 1,
-	  'D': 2,
-	  'D#/Eb': 3,
-	  'E': 4,
-	  'F': 5,
-	  'F#/Gb': 6,
-	  'G': 7,
-	  'G#/Ab': 8,
-	  'A': 9,
-	  'A#/Bb': 10,
-	  'B': 11
+	  'C#/Db': -1,
+	  'D': -2,
+	  'D#/Eb': -3,
+	  'E': -4,
+	  'F': -5,
+	  'F#/Gb': -6,
+	  'G': -7,
+	  'G#/Ab': -8,
+	  'A': -9,
+	  'A#/Bb': -10,
+	  'B': -11
 	};
 
 	exports.default = KEYS;
